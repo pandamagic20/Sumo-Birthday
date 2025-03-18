@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sumo! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio autoplay>
+        <source src="kesariya.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <h1>🎉 Happy Birthday Sumo! 🎉</h1>
+        <p>You are the best thing that ever happened to me! ❤️</p>
+        <button onclick="playAnimation()">Click for Surprise</button>
+    </div>
+
+    <div id="fireworks"></div>
+
+    <script>
+        function playAnimation() {
+            let fireworks = document.getElementById("fireworks");
+            fireworks.innerHTML = "🎆🎇✨🎆🎇✨";
+        }
+    </script>
+</body>
+</html>
