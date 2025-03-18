@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions for Sumo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="question">What's my favorite color? 🎨</h2>
+        <input type="text" id="answer" placeholder="Type your answer here...">
+        <button onclick="nextQuestion()">Next</button>
+    </div>
+
+    <script>
+        let questions = [
+            "What's my favorite color? 🎨",
+            "When did we first talk? 📅",
+            "What's your nickname for me? 💕",
+            "Do you love me forever? 😘"
+        ];
+        
+        let answers = [];
+        let index = 0;
+
+        function nextQuestion() {
+            let userAnswer = document.getElementById("answer").value;
+            answers.push(userAnswer);
+            index++;
+
+            if (index < questions.length) {
+                document.getElementById("question").innerText = questions[index];
+                document.getElementById("answer").value = "";
+            } else {
+                window.location.href = "surprise.html";
+            }
+        }
+    </script>
+</body>
+</html>
